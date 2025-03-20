@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>WebRTC Browser SDP</title>
+  </head>
+  <body>
+    <div id="videos">
+      <video id="localVideo" autoplay playsinline></video>
+      <video id="remoteVideo" autoplay playsinline></video>
+    </div>
+
+    <div class="form_container">
+      <div class="form_container_item">
+        <label>SDP Offer</label>
+        <textarea id="sdpOfferTextArea"></textarea>
+        <button id="createOfferButton">Create Offer</button>
+      </div>
+
+      <div class="form_container_item">
+        <label>SDP Answer</label>
+        <textarea id="sdpAnswerTextArea"></textarea>
+        <button id="createAnswerButton">Create Answer</button>
+      </div>
+    </div>
+    <button id="addAnswerButton" style="width: 100%; margin-top: 1vw">
+      Add Answer
+    </button>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

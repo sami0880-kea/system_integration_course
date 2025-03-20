@@ -1,0 +1,9 @@
+{
+  "name": "Lionel Messi",
+  "age": 37,
+  "team": "Inter Miami",
+  "country": "Argentina",
+  "position": "Forward",
+  "height": 170,
+  "previousTeams": ["FC Barcelona", "PSG"]
+}
