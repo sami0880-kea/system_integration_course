@@ -41,9 +41,7 @@ async function createPeerConnection(sdpOfferTextAreaId) {
   peerConnection.onicecandidate = event => {
     if (event.candidate) {
       document.getElementById(sdpOfferTextAreaId).textContent = JSON.stringify(
-        peerConnection.localDescription,
-        null,
-        2
+        peerConnection.localDescription
       );
     }
   };
