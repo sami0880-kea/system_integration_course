@@ -53,7 +53,6 @@ async def parse_csv_file(file):
             csv_reader = csv.DictReader(f)
             records = []
             for row in csv_reader:
-                # Handle semicolon-separated values like in the Node.js version
                 processed_row = {
                     key: value.split(';') if ';' in value else value
                     for key, value in row.items()
