@@ -11,7 +11,7 @@ CREATE TABLE employees (
     last_name VARCHAR(50),
     email VARCHAR(100),
     salary DECIMAL(10,2),
-    department VARCHAR(50),
+    department VARCHAR(50)
 );
 
 CREATE TABLE departments (
