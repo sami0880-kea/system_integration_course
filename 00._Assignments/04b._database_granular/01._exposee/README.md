@@ -46,7 +46,7 @@ Database: employee_db
    ```
    Username: read_user
    Password: read123
-   Access Level: Can read most employee data except sensitive notes
+   Access Level: Can read employee data
    ```
 
 3. **Write User** (Department-specific Access)
@@ -114,7 +114,6 @@ Try these queries:
 SELECT first_name, last_name, email, salary, department FROM employees;
 
 -- Should fail
-SELECT sensitive_notes FROM employees;
 INSERT INTO employees (first_name, last_name) VALUES ('Test', 'User');
 ```
 
