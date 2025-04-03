@@ -3,6 +3,8 @@
 
 ### custom ###
 my_enviroment/
+pgdump.sql
+init.sql
 
 ### Node ###
 # Logs
