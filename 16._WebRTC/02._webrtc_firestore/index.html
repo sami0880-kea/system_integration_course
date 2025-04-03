@@ -7,6 +7,20 @@
     <title>WebRTC Firestore</title>
   </head>
   <body>
+    <div id="videos">
+      <video id="localVideo" autoplay playsinline></video>
+      <video id="remoteVideo" autoplay playsinline></video>
+    </div>
+
+    <div class="form_container">
+      <div class="form_container_item">
+        <button id="startCall">Start Call</button>
+      </div>
+      <div class="form_container_item">
+        <button id="answerCall">Answer Call</button>
+      </div>
+    </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
