@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multipart Forms</title>
+  </head>
+  <body>
+    <h2>Basic Form Express</h2>
+    <form action="http://localhost:8080/form" method="post">
+      <label for="username">Username</label>
+      <input type="text" name="username" placeholder="Enter username" />
+      <label for="password">Password</label>
+      <input type="password" name="password" placeholder="Enter password" />
+      <!-- <label for="file">File</label>
+      <input type="file" name="file" /> -->
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>Basic Form FastAPI</h2>
+    <form action="http://localhost:8000/form" method="post">
+      <label for="username">Username</label>
+      <input type="text" name="username" placeholder="Enter username" />
+      <label for="password">Password</label>
+      <input type="password" name="password" placeholder="Enter password" />
+      <!-- <label for="file">File</label>
+      <input type="file" name="file" /> -->
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>File Form Express</h2>
+    <form
+      action="http://localhost:8080/fileform"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <label for="file">File</label>
+      <input type="file" name="file" accept="image/*" />
+
+      <label for="description">Description</label>
+      <input type="text" name="description" placeholder="Enter description" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>File Form FastAPI</h2>
+    <form
+      action="http://localhost:8000/fileform"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <label for="file">File</label>
+      <input type="file" name="file" accept="image/*" />
+
+      <label for="description">Description</label>
+      <input type="text" name="description" placeholder="Enter description" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      const fileInput = document.querySelector('input[type="file"]');
+
+      //   fileInput.addEventListener("change", event => {
+      //     const file = event.target.files[0];
+      //     const validTypes = ["image/jpeg", "image/png", "image/svg"];
+
+      //     if (!validTypes.includes(file.type)) {
+      //       alert("Invalid file type");
+      //       fileInput.value = "";
+      //     }
+      //   });
+
+      const maxFileSize = 20 * 1024 * 1024; // 20MB
+
+      fileInput.addEventListener("change", event => {
+        const file = event.target.files[0];
+        if (file.size > maxFileSize) {
+          alert("File size is too large");
+          fileInput.value = "";
+          return;
+        }
+      });
+    </script>
+  </body>
+</html>

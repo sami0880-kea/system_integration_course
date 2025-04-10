@@ -5,6 +5,7 @@
 my_enviroment/
 pgdump.sql
 init.sql
+uploads/
 
 ### Node ###
 # Logs
