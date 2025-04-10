@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CORS</title>
+  </head>
+  <body>
+    <h2>Timestamp from Express</h2>
+    <p id="timestamp-express"></p>
+
+    <h2>Timestamp from FastAPI</h2>
+    <p id="timestamp-fastapi"></p>
+
+    <script>
+      const timestampExpress = document.getElementById("timestamp-express");
+      const timestampFastapi = document.getElementById("timestamp-fastapi");
+
+      fetch("http://localhost:8080/timestamp")
+        .then(response => response.json())
+        .then(data => {
+          timestampExpress.textContent = data.date;
+        })
+        .catch(error => {
+          timestampExpress.textContent = error;
+        });
+
+      fetch("http://localhost:8000/timestamp")
+        .then(response => response.json())
+        .then(data => {
+          timestampFastapi.textContent = data.date;
+        })
+        .catch(error => {
+          timestampFastapi.textContent = error;
+        });
+    </script>
+  </body>
+</html>
