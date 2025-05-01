@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GraphQL Node Basic</title>
+  </head>
+  <body>
+    <h1>GraphQL Node Basic</h1>
+
+    <p style="font-weight: bold">
+      Key: <span id="key" style="font-weight: normal"></span>
+    </p>
+
+    <p style="font-weight: bold">
+      Value: <span id="value" style="font-weight: normal"></span>
+    </p>
+
+    <script>
+      const keyDiv = document.getElementById("key");
+      const valueDiv = document.getElementById("value");
+
+      const query = `
+        query {
+          hello
+        }
+      `;
+
+      fetch("/graphql", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ query }),
+      })
+        .then(response => response.json())
+        .then(result => {
+          keyDiv.textContent = Object.keys(result.data);
+          valueDiv.textContent = result.data.hello;
+        });
+    </script>
+  </body>
+</html>
