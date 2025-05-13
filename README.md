@@ -19,7 +19,7 @@
 | 10a        | [Document A Database](https://github.com/sami0880-kea/system_integration_course/tree/main/17._Database_Migrations)                                |
 | 10b        | [Migrate From One Database To Another](https://github.com/sami0880-kea/system_integration_course/tree/main/17._Database_Migrations/03._migration) |
 | 11a        | [Auth Integration](#)                                                                                                                             |
-| 11b        | [Integrate with payment](#)                                                                                                                       |
+| 11b        | [Integrate with payment](https://github.com/sami0880-kea/system_integration_course/tree/main/00._Assignments/11b._integrate-payment)              |
 | 12a        | [Webhook System](#)                                                                                                                               |
 | 13a        | [GraphQL](#)                                                                                                                                      |
 
