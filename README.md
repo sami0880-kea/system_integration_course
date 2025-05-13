@@ -21,7 +21,7 @@
 | 11a        | [Auth Integration](#)                                                                                                                             |
 | 11b        | [Integrate with payment](https://github.com/sami0880-kea/system_integration_course/tree/main/00._Assignments/11b._integrate-payment)              |
 | 12a        | [Webhook System](#)                                                                                                                               |
-| 13a        | [GraphQL](#)                                                                                                                                      |
+| 13a        | [GraphQL](https://github.com/sami0880-kea/system_integration_course/tree/main/00._Assignments/13a._GraphQL)                                       |
 
 ### Author
 
